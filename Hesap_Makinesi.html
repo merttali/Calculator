@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calulator</title>
+</head>
+
+<body style="background-color: rgb(47, 47, 47);">
+
+    <center>
+
+        <div class="template">
+            <div style="color:rgba(209, 209, 209, 0.26); font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: left;">HESAP MAKİNESİ / CALCULATOR</div>
+            <center>
+                <input id="input" type="text"  class="input" placeholder="0"></input><br><br>
+                <button class="diger" onclick="AC()">AC</button>
+
+                <button class="diger" onclick="ust()">xˣ</button>
+                <button class="diger" onclick="yuzde()">%</button>
+                <button class="islem" onclick="arti()">+</button><br><br>
+                <button class="rakam" onclick="nine()">9</button>
+                <button class="rakam" onclick="eight()">8</button>
+                <button class="rakam" onclick="seven()">7</button>
+                <button class="islem" onclick="eksi()">-</button><br><br>
+                <button class="rakam" onclick="six()">6</button>
+                <button class="rakam" onclick="five()">5</button>
+                <button class="rakam" onclick="four()">4</button>
+                <button class="islem" onclick="carpi()">x</button><br><br>
+                <button class="rakam" onclick="three()">3</button>
+                <button class="rakam" onclick="two()">2</button>
+                <button class="rakam" onclick="one()">1</button>
+                <button class="islem" onclick="bolu()">/</button><br><br>
+                <button class="rakam" onclick="zero()">0</button>
+                <button class="result" onclick="result()">=</button><br><br>
+            </center>
+            <div style="float: right; font-family: Arial, Helvetica, sans-serif; color: rgba(163, 163, 163, 0.144); font-size: 5pt;">✨Created By Mert Ali Uludağ</div>
+        </div>
+    </center>
+
+    <script>
+        var FirstValue = "Null";
+        var SecondNumber = "Null";
+        var ThirdNumber = "Null"
+        var process = "Null";
+        var SecondValue = "Null";
+        var ThirdValue = "Null";
+
+        function result() {
+            if (process == "+") {
+                FirstValue = FirstValue + SecondValue
+                console.log(process)
+            } else if (process == "-") {
+                console.log(process)
+                FirstValue = FirstValue - SecondValue
+            } else if (process == "x") {
+                FirstValue = FirstValue * SecondValue
+            } else if (process == "/") {
+                FirstValue = FirstValue / SecondValue
+            } else if (process == "^") {
+                FirstValue = Math.pow(FirstValue, SecondValue)
+            } else if (process == "%") {
+                FirstValue = FirstValue / 100 * SecondValue
+            }
+
+            console.log(FirstValue)
+            document.getElementById("input").value = FirstValue
+            process = "Null"
+            SecondValue = "Null"
+        }
+
+        function AC() {
+            document.getElementById("input").value = "";
+            FirstValue = "Null"
+            SecondValue = "Null"
+            process = "Null"
+            console.log("Reset")
+        }
+
+        function arti() {
+            process2 = "+"
+           if (process == "Null"){
+                process = process2
+                document.getElementById("input").value = FirstValue + process;
+           }
+           else {
+                if (process == "+") {
+                FirstValue = FirstValue + SecondValue
+                console.log(process)
+                } else if (process == "-") {
+                console.log(process)
+                FirstValue = FirstValue - SecondValue
+                } else if (process == "x") {
+                FirstValue = FirstValue * SecondValue
+                } else if (process == "/") {
+                FirstValue = FirstValue / SecondValue
+                } else if (process == "^") {
+                FirstValue = Math.pow(FirstValue, SecondValue)
+                } else if (process == "%") {
+                FirstValue = FirstValue / 100 * SecondValue
+                }
+
+                process = process2
+                console.log(FirstValue + process)
+                document.getElementById("input").value = FirstValue + process
+                SecondValue = "Null"
+           }
+        }
+
+        function eksi() {
+            process2 = "-"
+           if (process == "Null"){
+                process = process2
+                document.getElementById("input").value = FirstValue + process;
+           }
+           else {
+                if (process == "+") {
+                FirstValue = FirstValue + SecondValue
+                console.log(process)
+                } else if (process == "-") {
+                console.log(process)
+                FirstValue = FirstValue - SecondValue
+                } else if (process == "x") {
+                FirstValue = FirstValue * SecondValue
+                } else if (process == "/") {
+                FirstValue = FirstValue / SecondValue
+                } else if (process == "^") {
+                FirstValue = Math.pow(FirstValue, SecondValue)
+                } else if (process == "%") {
+                FirstValue = FirstValue / 100 * SecondValue
+                }
+
+                process = process2
+                console.log(FirstValue + process)
+                document.getElementById("input").value = FirstValue + process
+                SecondValue = "Null"
+           }
+        }
+
+        function carpi() {
+            process2 = "x"
+           if (process == "Null"){
+                process = process2
+                document.getElementById("input").value = FirstValue + process;
+           }
+           else {
+                if (process == "+") {
+                FirstValue = FirstValue + SecondValue
+                console.log(process)
+                } else if (process == "-") {
+                console.log(process)
+                FirstValue = FirstValue - SecondValue
+                } else if (process == "x") {
+                FirstValue = FirstValue * SecondValue
+                } else if (process == "/") {
+                FirstValue = FirstValue / SecondValue
+                } else if (process == "^") {
+                FirstValue = Math.pow(FirstValue, SecondValue)
+                } else if (process == "%") {
+                FirstValue = FirstValue / 100 * SecondValue
+                }
+
+                process = process2
+                console.log(FirstValue + process)
+                document.getElementById("input").value = FirstValue + process
+                SecondValue = "Null"
+           }
+        }
+
+        function bolu() {
+            process2 = "/"
+           if (process == "Null"){
+                process = process2
+                document.getElementById("input").value = FirstValue + process;
+           }
+           else {
+                if (process == "+") {
+                FirstValue = FirstValue + SecondValue
+                console.log(process)
+                } else if (process == "-") {
+                console.log(process)
+                FirstValue = FirstValue - SecondValue
+                } else if (process == "x") {
+                FirstValue = FirstValue * SecondValue
+                } else if (process == "/") {
+                FirstValue = FirstValue / SecondValue
+                } else if (process == "^") {
+                FirstValue = Math.pow(FirstValue, SecondValue)
+                } else if (process == "%") {
+                FirstValue = FirstValue / 100 * SecondValue
+                }
+
+                process = process2
+                console.log(FirstValue + process)
+                document.getElementById("input").value = FirstValue + process
+                SecondValue = "Null"
+           }
+        }
+
+        function ust() {
+            process2 = "^"
+           if (process == "Null"){
+                process = process2
+                document.getElementById("input").value = FirstValue + process;
+           }
+           else {
+                if (process == "+") {
+                FirstValue = FirstValue + SecondValue
+                console.log(process)
+                } else if (process == "-") {
+                console.log(process)
+                FirstValue = FirstValue - SecondValue
+                } else if (process == "x") {
+                FirstValue = FirstValue * SecondValue
+                } else if (process == "/") {
+                FirstValue = FirstValue / SecondValue
+                } else if (process == "^") {
+                FirstValue = Math.pow(FirstValue, SecondValue)
+                } else if (process == "%") {
+                FirstValue = FirstValue / 100 * SecondValue
+                }
+
+                process = process2
+                console.log(FirstValue + process)
+                document.getElementById("input").value = FirstValue + process
+                SecondValue = "Null"
+           }
+        }
+
+        function yuzde() {
+            process2 = "+"
+           if (process == "Null"){
+                process = process2
+                document.getElementById("input").value = FirstValue + process;
+           }
+           else {
+                if (process == "+") {
+                FirstValue = FirstValue + SecondValue
+                console.log(process)
+                } else if (process == "-") {
+                console.log(process)
+                FirstValue = FirstValue - SecondValue
+                } else if (process == "x") {
+                FirstValue = FirstValue * SecondValue
+                } else if (process == "/") {
+                FirstValue = FirstValue / SecondValue
+                } else if (process == "^") {
+                FirstValue = Math.pow(FirstValue, SecondValue)
+                } else if (process == "%") {
+                FirstValue = FirstValue / 100 * SecondValue
+                }
+
+                process = process2
+                console.log(FirstValue + process)
+                document.getElementById("input").value = FirstValue + process
+                SecondValue = "Null"
+           }
+        }
+
+        function one() {
+            x = 1
+            if (FirstValue == "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = FirstValue * 10 + x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue == "Null") {
+                SecondValue = x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue != "Null") {
+                SecondValue = SecondValue * 10 + x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            }
+        }
+
+        function two() {
+            x = 2
+            if (FirstValue == "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = FirstValue * 10 + x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue == "Null") {
+                SecondValue = x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue != "Null") {
+                SecondValue = SecondValue * 10 + x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            }
+        }
+
+        function three() {
+            x = 3
+            if (FirstValue == "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = FirstValue * 10 + x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue == "Null") {
+                SecondValue = x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue != "Null") {
+                SecondValue = SecondValue * 10 + x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            }
+        }
+
+        function four() {
+            x = 4
+            if (FirstValue == "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = FirstValue * 10 + x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue == "Null") {
+                SecondValue = x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue != "Null") {
+                SecondValue = SecondValue * 10 + x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            }
+        }
+
+        function five() {
+            x = 5
+            if (FirstValue == "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = FirstValue * 10 + x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue == "Null") {
+                SecondValue = x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue != "Null") {
+                SecondValue = SecondValue * 10 + x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            }
+        }
+
+        function six() {
+            x = 6
+            if (FirstValue == "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = FirstValue * 10 + x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue == "Null") {
+                SecondValue = x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue != "Null") {
+                SecondValue = SecondValue * 10 + x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            }
+        }
+
+        function seven() {
+            x = 7
+            if (FirstValue == "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = FirstValue * 10 + x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue == "Null") {
+                SecondValue = x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue != "Null") {
+                SecondValue = SecondValue * 10 + x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            }
+        }
+
+        function eight() {
+            x = 8
+            if (FirstValue == "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = FirstValue * 10 + x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue == "Null") {
+                SecondValue = x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue != "Null") {
+                SecondValue = SecondValue * 10 + x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            }
+        }
+
+        function nine() {
+            x = 9
+            if (FirstValue == "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = FirstValue * 10 + x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue == "Null") {
+                SecondValue = x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue != "Null") {
+                SecondValue = SecondValue * 10 + x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            }
+        }
+
+        function zero() {
+            x = 0
+            if (FirstValue == "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process == "Null" && SecondValue == "Null") {
+                FirstValue = FirstValue * 10 + x;
+                document.getElementById("input").value = FirstValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue == "Null") {
+                SecondValue = x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            } else if (FirstValue != "Null" && process != "Null" && SecondValue != "Null") {
+                SecondValue = SecondValue * 10 + x;
+                document.getElementById("input").value = FirstValue + process + SecondValue;
+            }
+        }
+    </script>
+
+    <style>
+        .template {
+            background-color: rgb(27, 27, 27);
+            padding: 3%;
+            padding-top: 1%;
+            border-radius: 15px;
+        }
+        
+        .input {
+            background-color: rgb(241, 241, 241);
+            border: solid black 2px;
+            border-radius: 20px;
+            width: 62%;
+            height: 50px;
+            margin-top: 3%;
+            font-size: 40px;
+            text-align: center;
+        }
+        
+        .islem {
+            width: 12%;
+            height: 50px;
+            background-color: coral;
+            border-radius: 25px;
+            border: none;
+            margin-right: 3%;
+            font-size: x-large;
+        }
+        
+        .islem:active {
+            width: 12%;
+            height: 50px;
+            background-color: rgb(223, 109, 68);
+            border-radius: 25px;
+            border: none;
+            margin-right: 3%;
+            font-size: x-large;
+        }
+        
+        .rakam {
+            width: 12%;
+            height: 50px;
+            background-color: rgb(200, 200, 200);
+            border-radius: 25px;
+            border: none;
+            margin-right: 3%;
+            font-size: x-large;
+        }
+        
+        .rakam:active {
+            width: 12%;
+            height: 50px;
+            background-color: rgb(153, 153, 153);
+            border-radius: 25px;
+            border: none;
+            margin-right: 3%;
+            font-size: x-large;
+        }
+        
+        .diger {
+            width: 12%;
+            height: 50px;
+            background-color: rgb(53, 53, 53);
+            color: white;
+            border-radius: 25px;
+            border: none;
+            margin-right: 3%;
+            font-size: x-large;
+        }
+        
+        .diger:active {
+            width: 12%;
+            height: 50px;
+            background-color: rgb(37, 37, 37);
+            color: white;
+            border-radius: 25px;
+            border: none;
+            margin-right: 3%;
+            font-size: x-large;
+        }
+        
+        .result {
+            width: 43%;
+            height: 50px;
+            background-color: red;
+            color: white;
+            border-radius: 25px;
+            border: none;
+            margin-right: 3%;
+            font-size: x-large;
+        }
+        
+        .result:active {
+            width: 43%;
+            height: 50px;
+            background-color: rgb(238, 0, 0);
+            color: white;
+            border-radius: 25px;
+            border: none;
+            margin-right: 3%;
+            font-size: x-large;
+        }
+    </style>
+
+
+</body>
+
+</html>
